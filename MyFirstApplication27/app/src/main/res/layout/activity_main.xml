@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="94dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="60dp"
+        android:checkedButton="@+id/rbtnM"
+        app:layout_constraintEnd_toEndOf="@+id/fldPrenom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbtnM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mâle" />
+
+        <RadioButton
+            android:id="@+id/rbtnF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Femâle" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/fldPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Prénom"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/fldNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nom"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/fldBirth"
+        app:layout_constraintStart_toStartOf="@+id/fldPrenom"
+        app:layout_constraintTop_toBottomOf="@+id/fldPrenom" />
+
+    <EditText
+        android:id="@+id/fldBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Date Naiss."
+        android:inputType="date"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/fldTel"
+        app:layout_constraintStart_toStartOf="@+id/fldNom"
+        app:layout_constraintTop_toBottomOf="@+id/fldNom" />
+
+    <EditText
+        android:id="@+id/fldTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tél."
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/fldMail"
+        app:layout_constraintStart_toStartOf="@+id/fldBirth"
+        app:layout_constraintTop_toBottomOf="@+id/fldBirth" />
+
+    <EditText
+        android:id="@+id/fldAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Adresse"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/fldMail"
+        app:layout_constraintTop_toBottomOf="@+id/fldMail" />
+
+    <EditText
+        android:id="@+id/fldZip"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Code postal"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/fldAdresse"
+        app:layout_constraintTop_toBottomOf="@+id/fldAdresse" />
+
+    <EditText
+        android:id="@+id/fldMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/fldAdresse"
+        app:layout_constraintStart_toStartOf="@+id/fldTel"
+        app:layout_constraintTop_toBottomOf="@+id/fldTel" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="159dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Envoyer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fldZip" />
+
+    <ImageView
+        android:id="@+id/btnPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="28dp"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@+id/fldPrenom"
+        app:layout_constraintStart_toStartOf="@+id/fldPrenom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+</android.support.constraint.ConstraintLayout>
